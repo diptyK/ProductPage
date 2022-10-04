@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Document</title>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- font-awesome link only for search icon -->
+  </head>
+
+  <body>
+    <div class="offer"><p>Free Delivery on order above Rs 2000/-</p></div>
+    <!-- header -->
+    <div class="header mainPadding">
+      <button class="mobShow" id="more" onclick="myFunction()">
+        <img src="./images/icon-hamburger.svg" alt="menubar" />
+      </button>
+      <a id="companyLogo"
+        ><img src="./images/black_logo.png" alt="companyLogo" class="logo" />
+      </a>
+      <div class="center mobHide">
+        <a class="headerLink" href="#home">Men</a>
+        <a class="headerLink" href="#home">Women</a>
+        <a class="headerLink" href="#home">Kids</a>
+      </div>
+      <div class="headerRight">
+        <img src="./images/icons8-search.svg" alt="sea" />
+        <img src="./images/icon-profile.svg" alt="pro" />
+        <div class="cartIconContainer">
+          <img class="largeCart" src="images/icon-cart.svg" alt="car" />
+          <p id="cartValue"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobShow">
+      <div class="headerMobile" id="headerMobile">
+        <a class="headerLink" href="#home">Men</a>
+        <a class="headerLink" href="#home">Women</a>
+        <a class="headerLink" href="#home">Kids</a>
+      </div>
+    </div>
+    <hr />
+    <!-- primary container -->
+    <div class="mainContainer">
+      <div class="container1 mainPadding">
+        <div class="subContainer">
+          <div class="imgCarDesk">
+            <div class="image-border">
+              <img src="./images/product-image-1.png" alt="img" />
+            </div>
+            <div class="image-border">
+              <img src="./images/product-image-2.png" alt="img" />
+            </div>
+            <div class="image-border">
+              <img src="./images/product-image-3.png" alt="img" />
+            </div>
+            <div class="image-border">
+              <img src="./images/product-image-1.png" alt="img" />
+            </div>
+          </div>
+          <div class="imgCarMob">
+            <div class="carousel carousel-main" data-flickity>
+              <div class="image-border">
+                <img src="./images/product-image-1.png" alt="img" />
+              </div>
+              <div class="image-border">
+                <img src="./images/product-image-2.png" alt="img" />
+              </div>
+              <div class="image-border">
+                <img src="./images/product-image-3.png" alt="img" />
+              </div>
+              <div class="image-border">
+                <img src="./images/product-image-1.png" alt="img" />
+              </div>
+            </div>
+
+            <div
+              class="carousel carousel-nav"
+              data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'
+            >
+              <!-- <div class="carousel-cell ">
+                <img src="./images/product-image-1.png" alt="img" />
+              </div>
+              <div class="carousel-cell ">
+                <img src="./images/product-image-2.png" alt="img" />
+              </div>
+              <div class="carousel-cell ">
+                <img src="./images/product-image-3.png" alt="img" />
+              </div>
+              <div class="carousel-cell ">
+                <img src="./images/product-image-1.png" alt="img" />
+              </div> -->
+
+              <div class="image-border small-corousel">
+                <img src="./images/product-image-1.png" alt="img" />
+              </div>
+              <div class="image-border small-corousel">
+                <img src="./images/product-image-2.png" alt="img" />
+              </div>
+              <div class="image-border small-corousel">
+                <img src="./images/product-image-3.png" alt="img" />
+              </div>
+              <div class="image-border small-corousel">
+                <img src="./images/product-image-1.png" alt="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subContainer">
+          <div class="product-info">
+            <div class="child-container2">
+              <p class="text2 heading1">Clothing Company</p>
+              <h1 class="title1">Ruffled Sleveless Top</h1>
+              <p>
+                <span class="line-through">
+                  <span class="price-info">Rs.1500.00</span>
+                </span>
+                <b class="price-info"> Rs. 899.00 </b>
+                <button class="Sale-button">Sale</button>
+              </p>
+
+              <p class="text1">Size</p>
+              <div class="size-select">
+                <button class="btn_ovel">S</button>
+                <button class="btn_ovel">M</button>
+                <button class="btn_ovel">L</button>
+                <button class="btn_ovel">XL</button>
+              </div>
+
+              <p class="text1">Quantity</p>
+              <div class="outerWraper">
+                <div class="wrapper">
+                  <input
+                    class="btnAdd"
+                    type="button"
+                    onclick="decrementValue()"
+                    value="-"
+                  />
+                  <input
+                    class="quantityValue"
+                    type="text"
+                    name="quantity"
+                    value="1"
+                    maxlength="2"
+                    id="number"
+                  />
+                  <input
+                    class="btnAdd"
+                    type="button"
+                    onclick="incrementValue()"
+                    value="+"
+                  />
+                </div>
+              </div>
+              <div class="CartBtn">
+                <button class="addtocartbutton" id="addtocart">
+                  <span class="text3"> Add to cart</span>
+                </button>
+                <button class="buybutton" id="buy-now">
+                  <span class="text3"> Buy it Now</span>
+                </button>
+              </div>
+              <div class="description">
+                <p class="text2">
+                  A dreamy feminine piece , this top is made from a medium
+                  weight, extra soft cotton blend with a light airy feel and
+                  paper-like quality.
+                </p>
+                <br />
+                <p class="text2">
+                  Design with Voluminous ruffled straps as well as ruffle
+                  details acccross the chest , it has a straight cut fit and a
+                  square neckline.
+                </p>
+              </div>
+
+              <div class="acc">
+                <hr class="divider" />
+                <button class="accordion">
+                  <img src="images/icon-materials.svg" alt="Materials" />
+                  Materials
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+                <hr class="divider" />
+
+                <button class="accordion">
+                  <img src="images/icon-shipping.svg" alt="Shipping" /> Shipping
+                  & Returns
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+                <hr class="divider" />
+                <button class="accordion">
+                  <img src="images/icon-dimensions.svg" alt="Dimentions" />
+                  Dimensions
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+                <hr class="divider" />
+                <button class="accordion">
+                  <img src="images/icon-care.svg" alt="care" /> Care Instuctions
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
